@@ -114,3 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.iwlan.enable=true \
 	persist.vendor.radio.data_con_rprt=1
+
+# Board BSP Version
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.build.version.bsp=0.0.1_181015
