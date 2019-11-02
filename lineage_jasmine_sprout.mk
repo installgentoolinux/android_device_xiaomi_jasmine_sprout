@@ -20,8 +20,6 @@
 # included in a build is to use PRODUCT_PACKAGES in a product
 # definition file).
 #
-#TWRP
-BUILD_TWRP := true
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
@@ -30,12 +28,6 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
-
-# Build Fingerprint
-PRODUCT_BUILD_PROP_OVERRIDES += \
-	PRIVATE_BUILD_DESC="jasmine-user 9 PKQ1.180904.001 V10.0.9.0.PDIMIXM release-keys"
-
-BUILD_FINGERPRINT := xiaomi/jasmine/jasmine_sprout:9/PKQ1.180904.001/V10.0.9.0.PDIMIXM:user/release-keys
 
 # Device identifier
 PRODUCT_BRAND := xiaomi
@@ -48,5 +40,15 @@ PRODUCT_MODEL := Mi A2
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="jasmine_sprout" \
     PRODUCT_NAME="jasmine"
+
+# Build Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+        PRIVATE_BUILD_DESC="jasmine-user 9 PKQ1.180904.001 V10.0.9.0.PDIMIXM release-keys"
+
+#Build FP to be picked by both system and vendor
+BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.021/4565141:user/release-keys"
+
+#TWRP
+BUILD_TWRP := true
 
 TARGET_VENDOR_PRODUCT_NAME := jasmine
