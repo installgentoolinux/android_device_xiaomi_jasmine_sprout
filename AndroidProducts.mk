@@ -21,11 +21,11 @@
 # definition file).
 #
 
-# inherit MI A2 lineage device config
+# inherit MI A2 aosip device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_jasmine_sprout.mk
+    $(LOCAL_DIR)/aosip_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_jasmine_sprout-eng \
-    lineage_jasmine_sprout-userdebug \
-		lineage_jasmine_sprout-eng
+    aosip_jasmine_sprout-eng \
+    aosip_jasmine_sprout-userdebug \
+		aosip_jasmine_sprout-eng

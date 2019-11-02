@@ -24,7 +24,10 @@
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
@@ -33,7 +36,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 PRODUCT_BRAND := xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
-PRODUCT_NAME := lineage_jasmine_sprout
+PRODUCT_NAME := aosip_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
 
